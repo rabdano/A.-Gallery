@@ -370,13 +370,13 @@ function ag_shortcode( $attr ) {
 					   $('#a-gallery a').lightBox({
 						overlayBgColor: '#FFF',
 						overlayOpacity: 0.6,
-						imageLoading: '{$lightboxurl}images/loading.gif',
-						imageBtnClose: '{$lightboxurl}images/close.gif',
-						imageBtnPrev: '{$lightboxurl}images/prev.gif',
-						imageBtnNext: '{$lightboxurl}images/next.gif',
-						containerResizeSpeed: 350,
-						maxHeight: screen.height * 0.8,
-						maxWidth: screen.width * 0.8
+						imageLoading: '{$lightboxurl}images/lightbox-ico-loading.gif',
+						imageBtnPrev: '{$lightboxurl}images/lightbox-btn-prev.gif',
+						imageBtnNext: '{$lightboxurl}images/lightbox-btn-next.gif',
+						imageBtnClose: '{$lightboxurl}images/lightbox-btn-close.gif',
+						imageBlank: '{$lightboxurl}images/lightbox-blank.gif',
+						maxHeight: 400,
+						maxWidth: 800
 					   });
 					});
 				});
