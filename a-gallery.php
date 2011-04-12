@@ -189,7 +189,7 @@ add_filter( 'attachment_fields_to_edit', 'ag_add_fields_to_edit', 10, 2 );
  * @uses add_meta_box(), wp_nonce_field()
  */
 function ag_add_detach_box() {
-    add_meta_box( 'ag_detach_box', __( 'Detach images' ), 'ag_inner_custom_box', 'post' );
+    add_meta_box( 'ag_detach_box', __( 'Sort or detach images' ), 'ag_inner_custom_box', 'post' );
     
     // display box of images
 	function ag_inner_custom_box() {
@@ -406,7 +406,7 @@ add_action('admin_print_scripts', 'ag_admin_head_inserts' );
  * @uses wp_register_script(), wp_enqueue_script(), wp_register_style(), wp_enqueue_style()
  */
 function ag_head_inserts() {
-	wp_register_script( 'jquery-lightbox-js', A_GALLERY_URL . 'js/jquery-lightbox.js' );
+	wp_register_script( 'jquery-lightbox-js', A_GALLERY_URL . 'js/jquery-lightbox.js', array( 'jquery' ) );
 	wp_enqueue_script( 'jquery-lightbox-js' );
 	wp_register_style( 'jquery-lightbox-css', A_GALLERY_URL . 'css/jquery-lightbox.css' );
 	wp_enqueue_style( 'jquery-lightbox-css');
