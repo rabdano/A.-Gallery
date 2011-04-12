@@ -1,5 +1,5 @@
 <?php
-require_once('../../../wp-admin/admin.php');
+include('../../../wp-admin/admin.php');
 global $wpdb;
 /**
  * Обработка действий по ссылкам.
@@ -14,7 +14,7 @@ if ( !empty( $_GET['ag_pid'] ) && !empty( $_GET['ag_aid'] ) ) {
 	$ag_aid = $_GET['ag_aid'];
 	$error = $wpdb->update( $wpdb->posts, array( 'post_parent' => $post_id ), array( 'ID' => $ag_aid ), array( '%d' ), array( '%d' ) );
 	if ( $error == 1 ) {
-		echo '<script type="text/javascript">parent.eval(\'tb_remove();location.reload(true);\')</script>';
+		echo '<script type="text/javascript"><!--<![CDATA-->[parent.eval(\'tb_remove();location.reload(true);\')<!--]]>--></script>';
 	} else {
 		echo '<h3 style="">An error was ocurred while processing your request.</h3>';
 	}

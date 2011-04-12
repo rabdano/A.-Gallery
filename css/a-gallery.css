@@ -22,26 +22,26 @@
 	position:absolute !important;
 	width:40px !important;
 	left:-40px !important;
-	background:url('images/left.png') no-repeat 0 50% !important;
+	background:url('../images/left.png') no-repeat 0 50% !important;
 	cursor:pointer !important;
 	z-index:100;
 }
 
 #a-gallery #a-gallery-left:hover {
-	background:url('images/left-hover.png') no-repeat 0 50% !important;
+	background:url('../images/left-hover.png') no-repeat 0 50% !important;
 }
 
 #a-gallery #a-gallery-right {
 	position:absolute !important;
 	width:40px !important;
 	top:0;
-	background:url('images/right.png') no-repeat 0 50% !important;
+	background:url('../images/right.png') no-repeat 0 50% !important;
 	cursor:pointer !important;
 	z-index:100;
 }
 
 #a-gallery #a-gallery-right:hover {
-	background:url('images/right-hover.png') no-repeat 0 50% !important;
+	background:url('../images/right-hover.png') no-repeat 0 50% !important;
 }
 
 #a-gallery-container .image {
@@ -53,20 +53,18 @@
 	margin-right:10px !important;
 }
 
-#lightbox-image {
+/*#lightbox-image {
 	max-width:800px !important;
 	max-height: 566px;
 }
 
 #lightbox-container-image-box {
-	top:-25px;
 	max-width:816px !important;
 	max-height: 566px;
 }
 
 #lightbox-container-image-data-box {
-	top:-25px;
 	max-width:796px !important;
-}
+}*/
 
 /* **/

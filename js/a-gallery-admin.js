@@ -18,4 +18,9 @@ jQuery(document).ready(function($) {
 			}
 		});
 	});
+	
+	$('#media-upload .savebutton #save').click(function(){
+		parent.eval('tb_remove();location.reload(true);');
+	});
+	
 });

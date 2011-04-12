@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: A. Gallery 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-10 16:05+0300\n"
+"PO-Revision-Date: 2011-04-10 16:06+0300\n"
+"Last-Translator: Sevastyan Rabdano <sevastyan91@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../a-gallery.php:69
+msgid "A. Gallery options"
+msgstr ""
+
+#: ../a-gallery.php:69
+msgid "A. Gallery"
+msgstr ""
+
+#: ../a-gallery.php:82
+msgid "A. Gallery settings"
+msgstr ""
+
+#: ../a-gallery.php:85
+msgid "Admin"
+msgstr ""
+
+#: ../a-gallery.php:90
+msgid "Thumbnail width on post edit page"
+msgstr ""
+
+#: ../a-gallery.php:98
+msgid "Thumbnail height on post edit page"
+msgstr ""
+
+#: ../a-gallery.php:111
+msgid "Default<sup>1</sup> number of pictures in gallery"
+msgstr ""
+
+#: ../a-gallery.php:119
+msgid "Default width of border"
+msgstr ""
+
+#: ../a-gallery.php:127
+msgid "Default border color"
+msgstr ""
+
+#: ../a-gallery.php:135
+msgid "Default gallery thumbnail width"
+msgstr ""
+
+#: ../a-gallery.php:143
+msgid "Defaul gallery thumbnail height"
+msgstr ""
+
+#: ../a-gallery.php:151
+msgid "Default number of visible pictures (number of columns)"
+msgstr ""
+
+#: ../a-gallery.php:159
+msgid "<sup>1</sup> — This values will be used when entered shortcode don't provides any attributes. For example, if post contains \"[a_gallery item_h=\"200\"]\" then all values will be taken from here except item_h (thumbnail height)."
+msgstr ""
+
+#: ../a-gallery.php:163
+msgid "Save changes"
+msgstr ""
+
+#: ../a-gallery.php:180
+msgid "Attach to post"
+msgstr ""
+
