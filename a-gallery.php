@@ -189,7 +189,7 @@ add_filter( 'attachment_fields_to_edit', 'ag_add_fields_to_edit', 10, 2 );
  * @uses add_meta_box(), wp_nonce_field()
  */
 function ag_add_detach_box() {
-    add_meta_box( 'ag_detach_box', 'Detach images', 'ag_inner_custom_box', 'post' );
+    add_meta_box( 'ag_detach_box', __( 'Detach images' ), 'ag_inner_custom_box', 'post' );
     
     // display box of images
 	function ag_inner_custom_box() {

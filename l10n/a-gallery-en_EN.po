@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A. Gallery 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-10 16:05+0300\n"
-"PO-Revision-Date: 2011-04-10 16:06+0300\n"
+"POT-Creation-Date: 2011-04-12 15:00+0300\n"
+"PO-Revision-Date: 2011-04-12 15:00+0300\n"
 "Last-Translator: Sevastyan Rabdano <sevastyan91@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -72,5 +72,9 @@ msgstr ""
 
 #: ../a-gallery.php:180
 msgid "Attach to post"
+msgstr ""
+
+#: ../a-gallery.php:192
+msgid "Detach images"
 msgstr ""
 
