@@ -356,6 +356,8 @@
 			if ( ( key == settings.keyToClose ) || ( key == 'x' ) || ( keycode == escapeKey ) ) {
 				_finish();
 			}
+			// SR
+			if (keycode == 27) { _finish(); }
 			// Verify the key to show the previous image
 			if ( ( key == settings.keyToPrev ) || ( keycode == 37 ) ) {
 				// If we´re not showing the first image, call the previous
