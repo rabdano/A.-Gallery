@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A. Gallery 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-12 20:09+0300\n"
-"PO-Revision-Date: 2011-04-12 20:09+0300\n"
+"POT-Creation-Date: 2011-04-13 17:26+0300\n"
+"PO-Revision-Date: 2011-04-13 17:27+0300\n"
 "Last-Translator: Sevastyan Rabdano <sevastyan91@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,67 +14,75 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../a-gallery.php:69
+#: ../a-gallery.php:70
 msgid "A. Gallery options"
 msgstr "Настройки A. Gallery"
 
-#: ../a-gallery.php:69
+#: ../a-gallery.php:70
 msgid "A. Gallery"
 msgstr "A. Gallery"
 
-#: ../a-gallery.php:82
+#: ../a-gallery.php:83
 msgid "A. Gallery settings"
 msgstr "Настройки A. Gallery"
 
-#: ../a-gallery.php:85
+#: ../a-gallery.php:86
 msgid "Admin"
 msgstr "Консоль"
 
-#: ../a-gallery.php:90
+#: ../a-gallery.php:91
 msgid "Thumbnail width on post edit page"
 msgstr "Ширина миниатюры на странице редакрирования поста"
 
-#: ../a-gallery.php:98
+#: ../a-gallery.php:99
 msgid "Thumbnail height on post edit page"
 msgstr "Высота миниатюры на странице редактирования поста"
 
-#: ../a-gallery.php:111
+#: ../a-gallery.php:112
 msgid "Default<sup>1</sup> number of pictures in gallery"
 msgstr "Число изображений в галлерее по умолчанию<sup>1</sup>"
 
-#: ../a-gallery.php:119
+#: ../a-gallery.php:120
 msgid "Default width of border"
 msgstr "Ширина границы изображения в галлерее по умолчанию"
 
-#: ../a-gallery.php:127
+#: ../a-gallery.php:128
 msgid "Default border color"
 msgstr "Цвет границы изображения в галлерее по умолчанию"
 
-#: ../a-gallery.php:135
+#: ../a-gallery.php:136
 msgid "Default gallery thumbnail width"
 msgstr "Ширина миниатюры по умолчанию"
 
-#: ../a-gallery.php:143
+#: ../a-gallery.php:144
 msgid "Defaul gallery thumbnail height"
 msgstr "Высота миниатюры по умолчанию"
 
-#: ../a-gallery.php:151
+#: ../a-gallery.php:152
 msgid "Default number of visible pictures (number of columns)"
 msgstr "Число видимых в галлерее изображений (число колонок)"
 
-#: ../a-gallery.php:159
+#: ../a-gallery.php:160
+msgid "Default width of picture in gallery view."
+msgstr "Максимальная ширина изображения при просмотре галлереи."
+
+#: ../a-gallery.php:168
+msgid "Default height of picture in gallery view."
+msgstr "Максимальная высота изображения при просмотре галлереи."
+
+#: ../a-gallery.php:176
 msgid "<sup>1</sup> — This values will be used when entered shortcode don't provides any attributes. For example, if post contains \"[a_gallery item_h=\"200\"]\" then all values will be taken from here except item_h (thumbnail height)."
 msgstr "<sup>1</sup> — Эти значения будут использованы в том случае, когда shortcode не имеет аттрибутов. Например, если в записи встречается «[a_gallery item_h=\"200\"]», то будут использованы все эти значения, кроме item_h (высота миниатюры)."
 
-#: ../a-gallery.php:163
+#: ../a-gallery.php:180
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: ../a-gallery.php:180
+#: ../a-gallery.php:197
 msgid "Attach to post"
 msgstr "Добавить вложение к записи"
 
-#: ../a-gallery.php:192
+#: ../a-gallery.php:209
 msgid "Sort or detach images"
 msgstr "Отвязать вложение от записи"
 

@@ -20,7 +20,8 @@ add_option( 'ag-default-border-color', '#ccc' );
 add_option( 'ag-default-item-w', 100 );
 add_option( 'ag-default-item-h', 100 );
 add_option( 'ag-default-columns', 4 );
-add_option( 'ag_timthumb_max_file_size', 100 );
+add_option( 'ag-default-max-width', 800 );
+add_option( 'ag-default-max-height', 400 );
 
 load_plugin_textdomain( 'a-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/l10n/' );
 
@@ -152,6 +153,22 @@ function ag_display_options() {
 					</th>
 					<td>
 						<input type="text" class="regular-text" id="ag-default-columns" name="ag-default-columns" value="<?php echo get_option( 'ag-default-columns' ); ?>" />
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">
+						<label for="ag-default-max-width"><?php _e( 'Default width of picture in gallery view.', 'a-gallery' ); ?></label>
+					</th>
+					<td>
+						<input type="text" class="regular-text" id="ag-default-max-width" name="ag-default-max-width" value="<?php echo get_option( 'ag-default-max-width' ); ?>" />
+					</td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">
+						<label for="ag-default-max-height"><?php _e( 'Default height of picture in gallery view.', 'a-gallery' ); ?></label>
+					</th>
+					<td>
+						<input type="text" class="regular-text" id="ag-default-max-height" name="ag-default-max-height" value="<?php echo get_option( 'ag-default-max-height' ); ?>" />
 					</td>
 				</tr>
 			</tbody>
@@ -289,6 +306,8 @@ function ag_shortcode( $attr ) {
 		'item_w' => get_option( 'ag-default-item-w' ),
 		'item_h' => get_option( 'ag-default-item-h' ),
 		'columns' => get_option( 'ag-default-columns' ),
+		'max_width' => get_option( 'ag-default-max-width' ),
+		'max_height' => get_option( 'ag-default-max-height' ),
 		'exclude' => ''
 	), $attr) );
 	
@@ -375,8 +394,8 @@ function ag_shortcode( $attr ) {
 						imageBtnNext: '{$lightboxurl}images/lightbox-btn-next.gif',
 						imageBtnClose: '{$lightboxurl}images/lightbox-btn-close.gif',
 						imageBlank: '{$lightboxurl}images/lightbox-blank.gif',
-						maxHeight: 400,
-						maxWidth: 800
+						maxHeight: {$max_height},
+						maxWidth: {$max_width}
 					   });
 					});
 				});
