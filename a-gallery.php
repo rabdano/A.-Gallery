@@ -334,11 +334,12 @@ function ag_shortcode( $attr ) {
 	$item_c_w = $item_w + $border * 2;
 	$item_c_h = $item_h + $border * 2;
 	$c_width = ( $item_c_w + 10 ) * $columns - 10;
+	$s_width = ( $item_c_w + 10 ) * $count - 10;
 	
 	$html = "<div id='a-gallery' style='width:{$c_width}px !important;height:{$item_c_h}px !important;'>\n";
 	if ( $columns < $count ) $html .= "\t<div id='a-gallery-left' style='height:{$item_c_h}px !important;'></div>\n";
 	$html .= "\t<div id='a-gallery-container' style='width:{$c_width}px !important;height:{$item_c_h}px !important;'>\n";
-	if ( $columns < $count ) $html .= "\t\t<div id='slider' style='width:{$c_width}px !important;height:{$item_c_h}px !important;'>\n";
+	if ( $columns < $count ) $html .= "\t\t<div id='slider' style='width:{$s_width}px !important;height:{$item_c_h}px !important;'>\n";
 	
 	$c = 0;
 	foreach ( $r as $i ) {
@@ -360,7 +361,7 @@ function ag_shortcode( $attr ) {
 	if ( $columns < $count ) $html .= "\t<div id='a-gallery-right' style='height:{$item_c_h}px !important; left:{$c_width}px;'></div>\n";
 	$html .= "</div><!-- end of div#a-gallery -->\n";
 	$max_right_count = $count - $columns;
-	$item_c_w =  esc_attr( $item_c_w + 10 );
+	$item_c_w =  $item_c_w + 10;
 	$lightboxurl = A_GALLERY_URL;
 	$html .= "<script type='text/javascript'>
 				<!--<![CDATA[-->
@@ -369,17 +370,17 @@ function ag_shortcode( $attr ) {
 					var leftCount = 0;
 					var rightCount = {$max_right_count};
 					
-					$('#a-gallery #a-gallery-left').click(function(){
+					$('#a-gallery-left').click(function(){
 						if (leftCount > 0) {
-							$('#a-gallery-container #slider').animate({\"left\": \"+={$item_c_w}px\"}, \"normal\");
+							$('#slider').animate({'left': '+={$item_c_w}px'}, 'normal');
 							rightCount = rightCount + 1;
 							leftCount = leftCount - 1;
 						}
 					});
 
-					$('#a-gallery #a-gallery-right').click(function(){
+					$('#a-gallery-right').click(function(){
 						if (rightCount > 0) {
-							$('#a-gallery-container #slider').animate({\"left\": \"-={$item_c_w}px\"}, \"normal\");
+							$('#slider').animate({'left': '-={$item_c_w}px'}, 'normal');
 							rightCount = rightCount - 1;
 							leftCount = leftCount + 1;
 						}

@@ -15,6 +15,7 @@
 }
 
 #a-gallery #slider {
+	position:absolute;
 	margin:0;
 }
 
