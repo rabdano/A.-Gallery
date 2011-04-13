@@ -176,7 +176,7 @@ function ag_display_options() {
 		<p><?php _e( "<sup>1</sup> — This values will be used when entered shortcode don't provides any attributes. For example, if post contains " . '"[a_gallery item_h="200"]"' . " then all values will be taken from here except item_h (thumbnail height).", 'a-gallery' ); ?></p>
 		<br />
 		<input type="hidden" name="action" value="update" />
-		<input type="hidden" name="page_options" value="ag-admin-thumbnail-w,ag-admin-thumbnail-h,ag-default-count,ag-default-border,ag-default-border-color,ag-default-item-w,ag-default-item-h,ag-default-columns" />
+		<input type="hidden" name="page_options" value="ag-admin-thumbnail-w,ag-admin-thumbnail-h,ag-default-count,ag-default-border,ag-default-border-color,ag-default-item-w,ag-default-item-h,ag-default-columns,ag-default-max-height,ag-default-max-width" />
 		<input type="submit" id="submit" class="button-primary" name="update" value="<?php _e( 'Save changes', 'a-gallery' ); ?>" />
 	</form>
 	</div>
