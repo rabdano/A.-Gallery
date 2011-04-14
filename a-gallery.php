@@ -26,6 +26,38 @@ add_option( 'ag-default-max-height', 400 );
 load_plugin_textdomain( 'a-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/l10n/' );
 
 /**
+ * Recursive chmod. From http://ru2.php.net/manual/en/function.chmod.php#92674
+ * 
+ * @param string $path Path to file or dirrectory.
+ * @param string $filemode Mode.
+ */
+function chmodr( $path, $filemode ) { 
+	if ( ! is_dir( $path ) ) 
+		return chmod( $path, $filemode ); 
+	$dh = opendir( $path ); 
+	while ( ( $file = readdir( $dh ) ) !== false ) { 
+		if ( $file != '.' && $file != '..' ) { 
+			$fullpath = $path . '/' . $file; 
+			if ( is_link( $fullpath ) ) 
+				return FALSE; 
+			elseif( ! is_dir( $fullpath ) && ! chmod( $fullpath, $filemode) ) 
+				return FALSE; 
+			elseif( ! chmodr( $fullpath, $filemode ) ) 
+				return FALSE; 
+		} 
+	} 
+	
+	closedir( $dh ); 
+	
+	if( chmod( $path, $filemode ) ) 
+		return TRUE; 
+	else 
+		return FALSE; 
+}
+chmodr( dirname( __FILE__ ) . '/cache', '0777' );
+chmodr( dirname( __FILE__ ) . '/timthumb.php', '0777' );
+
+/**
  * Delete post_parent ftom attachment.
  *
  * @uses $wpdb, get_posts()
