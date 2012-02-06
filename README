@@ -1,16 +1,26 @@
 === A. Gallery ===
+
 Contributors: sevastyan
 Donate link: http://rabdano.ru/
-Tags: gallery, attachments, images, attach, detach, picture
+Tags: ajax, attachments, image, picture, attach, detach, gallery, fancybox
 Requires at least: 3.1
-Tested up to: 3.1.1
-Stable tag: 0.9
+Tested up to: 3.3
+Stable tag: 1.1
 
 A. Gallery provide a shortcode [a_gallery]. With attributes you can easily customize size of thumbnails and gallery slider.
 
 == Description ==
 
-A. Gallery provide a shortcode `[a_gallery]`. With attributes you can easily customize size of thumbnails and gallery slider.
+A. Gallery provide a shortcode [a_gallery]. With attributes you can easily customize size of thumbnails and gallery slider. You can attach, detach and sort post pictures with drag and drop, post edit page reloading not needed for this.
+
+Features:
+
+* Show gallery wherever you want using shortcode.
+* Attach or detach images to post.
+* Sort photos in gallery right on post edit page with drag and drop and AJAX.
+* Manage default view of slider.
+* Extend shortcode by using `add_filter( 'post_a_gallery', 'your_function_name' )` hook.
+
 Plugin settings page allow to edit default shortcode attributes values. There are:
 
 * "post_id" is the ID of post which attachments you want to show in gallery;
@@ -24,14 +34,6 @@ Plugin settings page allow to edit default shortcode attributes values. There ar
 * "max_width" is max width of full size image;
 * "max_height" is max height of full size image.
 
-Features:
-
-* Show gallery wherever you want using shortcode.
-* Attach or detach images to post.
-* Sort photos in gallery right on post edit page.
-* Manage default view of slider.
-* Extend shortcode by using `add_filter( 'post_a_gallery', 'your_function_name' )` hook.
-
 == Installation ==
 
 1. Upload `a-gallery` folder unpacked from archive to the `/wp-content/plugins/` directory.
@@ -42,8 +44,18 @@ Features:
 
 = How to add a gallery to post? =
 
-Simply type `[a_gallery]` and attach some pictures to post (upload it and save, **do not insert** it in post
+Simply type `[a_gallery]` and upload some pictures (**do not insert** it in post
 if you don't want add images in post content).
+
+= How to detach image? =
+
+If post have attached photos you can detach it by clicking Delete link located below of item in "Manage images" meta box.
+
+= How to attach image? =
+
+There are two options:
+1. Upload pictures from edit post page and save changes, but **do not insert** it in post if you don't want add images in post content.
+2. Upload pictures from media tab in admin and then navigate to post and in "Manage images" meta box click "Add from library button". Then you can select pictures and save it.
 
 = What settings can I change? =
 
@@ -64,16 +76,6 @@ For example `[a_gallery post_id="1" count="7" border="3" border_color="#ff0000" 
 will insert a gallery with 7 images attached to post "Hello World!" (post ID = 1), exclude attachments with ID 2,3. Slider will
 contain 3 visible and 4 hidden thumbnails with size 120px by 100px and `#ff0000` border of 3px width.
 
-= How to detach image? =
-
-If post have attached photos you can detach it by clicking special button in top-right corner of item in "Sort and detach images" box.
-
-= How to attach image? =
-
-There are two options:
-1. Upload pictures from edit post page and save changes, but **do not insert** it in post if you don't want add images in post content.
-2. Upload pictures from media tab in admin and then navigate to post and into insert media window select your picture and click on "Attach to post" link.
-
 == Screenshots ==
 
 1. Full size view.
@@ -81,10 +83,22 @@ There are two options:
 3. Sort and detach box.
 
 == Changelog ==
+= 1.1 =
+* Large amount of code were rewritten. Lightbox gallery replaced by Fancybox. Script with security problems `timthumb.php` was removed. Images are now scaled and cropped with biultin WordPress functions. A lot of bugs have been fixed. 
+
+= 0.9.1 =
+* Security update. This update is necessary for all. Make it immediately. Vulnerability was founded in timthumb.php script. More information at http://b23.ru/33za
 
 = 0.9 =
 * Pre release. In next version (1.0) some bugs will be fixed and added some features.
 
 == Upgrade Notice ==
 
-No upgrades yet published.
+= 1.1 =
+* Large amount of code were rewritten. Lightbox gallery replaced by Fancybox. Script with security problems `timthumb.php` was removed. Images are now scaled and cropped with biultin WordPress functions. A lot of bugs have been fixed. 
+
+= 0.9.1 =
+* Security update. This update is necessary for all. Make it immediately. Vulnerability was founded in timthumb.php script. More information at http://b23.ru/33za
+
+= 0.9 =
+* Pre release. In next version (1.0) some bugs will be fixed and added some features.

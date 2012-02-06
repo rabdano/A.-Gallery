@@ -1,12 +1,12 @@
 /** Gallegy */
 
-#a-gallery {
+.a-gallery {
 	position:relative !important;
 	margin:20px auto !important;
 	font-size:0 !important;
 }
 
-#a-gallery-container {
+.a-gallery-container {
 	white-space: nowrap !important;
 	overflow:hidden !important;
 	position:absolute !important;
@@ -14,12 +14,12 @@
 	left:0;
 }
 
-#a-gallery #slider {
+.a-gallery .slider {
 	position:absolute;
 	margin:0;
 }
 
-#a-gallery #a-gallery-left {
+.a-gallery .a-gallery-left {
 	position:absolute !important;
 	width:40px !important;
 	left:-40px !important;
@@ -28,11 +28,11 @@
 	z-index:100;
 }
 
-#a-gallery #a-gallery-left:hover {
+.a-gallery .a-gallery-left:hover {
 	background:url('../images/left-hover.png') no-repeat 0 50% !important;
 }
 
-#a-gallery #a-gallery-right {
+.a-gallery .a-gallery-right {
 	position:absolute !important;
 	width:40px !important;
 	top:0;
@@ -41,11 +41,11 @@
 	z-index:100;
 }
 
-#a-gallery #a-gallery-right:hover {
+.a-gallery .a-gallery-right:hover {
 	background:url('../images/right-hover.png') no-repeat 0 50% !important;
 }
 
-#a-gallery-container .image {
+.a-gallery-container .image {
 	background:none !important;
 	margin:0 !important;
 	padding:0 !important;

@@ -1,23 +1,22 @@
 <?php
-include('../../../wp-admin/admin.php');
-global $wpdb;
 /**
- * Обработка действий по ссылкам.
+ * Handle actions with images.
  *
- * @since 0.1
+ * @since 1.1
  *
  */
 
-// Привязываем картинку к файлу
-if ( !empty( $_GET['ag_pid'] ) && !empty( $_GET['ag_aid'] ) ) {
-	$post_id = $_GET['ag_pid'];
-	$ag_aid = $_GET['ag_aid'];
-	$error = $wpdb->update( $wpdb->posts, array( 'post_parent' => $post_id ), array( 'ID' => $ag_aid ), array( '%d' ), array( '%d' ) );
-	if ( $error == 1 ) {
-		echo '<script type="text/javascript"><!--<![CDATA-->[parent.eval(\'tb_remove();location.reload(true);\')<!--]]>--></script>';
-	} else {
-		echo '<h3 style="">An error was ocurred while processing your request.</h3>';
-	}
-}
+require_once('../../../wp-admin/admin.php');
+require_once('functions.php');
 
+$ag_action = $_REQUEST['ag_action'];
+$post_id = $_REQUEST['post_id'];
+$order = $_REQUEST['order'];
+
+if ( $ag_action == "add" ) {
+	ag_add( $post_id, $order );
+}
+if ( $ag_action == "save" ) {
+	ag_save_and_show( $post_id, true, $order );
+}
 ?>
